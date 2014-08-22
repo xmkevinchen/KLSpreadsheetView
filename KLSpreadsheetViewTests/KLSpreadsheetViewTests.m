@@ -9,17 +9,18 @@
 #import <Kiwi/Kiwi.h>
 #import "KLSpreadsheetView.h"
 
+
 SPEC_BEGIN(KLSpreadsheetViewSpec)
 
 describe(@"NSIndexPath", ^{
     it(@"should return correct row and column value", ^{
         NSInteger row = 1;
         NSInteger column = 2;
-        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row andColumn:column];
+        NSIndexPath *indexPath = [NSIndexPath indexPathForSpreadsheetRow:row spreadsheetColumn:column];
         
-        [[theValue(indexPath.row) should] equal:theValue(row)];
-        [[theValue(indexPath.column) should] equal:theValue(column)];
-        [[indexPath.description should] equal:@"1.2"];
+        [[theValue(indexPath.spreadsheetRow) should] equal:theValue(row)];
+        [[theValue(indexPath.spreadsheetColumn) should] equal:theValue(column)];
+        [[[indexPath spreadsheetDescription] should] equal:@"R1.C2"];
         
     });
 });

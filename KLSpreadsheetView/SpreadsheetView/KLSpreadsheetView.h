@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NSIndexPath+KLSpreadsheetView.h"
 
 @protocol KLSpreadsheetDataSource;
 @protocol KLSpreadsheetDelegate;
@@ -44,14 +45,5 @@
 - (CGFloat)spreadsheetView:(KLSpreadsheetView *)spreadsheetView heightForRow:(NSInteger)row;
 - (CGFloat)spreadsheetView:(KLSpreadsheetView *)spreadsheetView widthForColumn:(NSInteger)column;
 
-
-@end
-
-@interface NSIndexPath (KLSpreadsheetView)
-
-+ (NSIndexPath *)indexPathForRow:(NSInteger)row andColumn:(NSInteger)column;
-
-@property (nonatomic, readonly) NSInteger row;
-@property (nonatomic, readonly) NSInteger column;
 
 @end

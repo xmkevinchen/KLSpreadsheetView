@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AA8531619A6F0AE00CB5950 /* NSIndexPath+KLSpreadsheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8531519A6F0AE00CB5950 /* NSIndexPath+KLSpreadsheetView.m */; };
 		0ADCC9B519A5A6FA00AD683D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADCC9B419A5A6FA00AD683D /* Foundation.framework */; };
 		0ADCC9B719A5A6FA00AD683D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADCC9B619A5A6FA00AD683D /* CoreGraphics.framework */; };
 		0ADCC9B919A5A6FA00AD683D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADCC9B819A5A6FA00AD683D /* UIKit.framework */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0AA8531419A6F0AE00CB5950 /* NSIndexPath+KLSpreadsheetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSIndexPath+KLSpreadsheetView.h"; sourceTree = "<group>"; };
+		0AA8531519A6F0AE00CB5950 /* NSIndexPath+KLSpreadsheetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSIndexPath+KLSpreadsheetView.m"; sourceTree = "<group>"; };
 		0ADCC9B119A5A6FA00AD683D /* KLSpreadsheetView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KLSpreadsheetView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ADCC9B419A5A6FA00AD683D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0ADCC9B619A5A6FA00AD683D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -176,6 +179,8 @@
 		0ADCC9E519A5A72C00AD683D /* SpreadsheetView */ = {
 			isa = PBXGroup;
 			children = (
+				0AA8531419A6F0AE00CB5950 /* NSIndexPath+KLSpreadsheetView.h */,
+				0AA8531519A6F0AE00CB5950 /* NSIndexPath+KLSpreadsheetView.m */,
 				0ADCC9E619A5A74000AD683D /* KLSpreadsheetView.h */,
 				0ADCC9E719A5A74000AD683D /* KLSpreadsheetView.m */,
 				0ADCC9E919A5A81D00AD683D /* KLSpreadsheetViewCell.h */,
@@ -322,6 +327,7 @@
 				0ADCC9C119A5A6FA00AD683D /* main.m in Sources */,
 				0ADCC9E819A5A74000AD683D /* KLSpreadsheetView.m in Sources */,
 				0ADCC9F119A687B900AD683D /* KLSpreadsheetViewController.m in Sources */,
+				0AA8531619A6F0AE00CB5950 /* NSIndexPath+KLSpreadsheetView.m in Sources */,
 				0ADCC9C519A5A6FA00AD683D /* KLAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -207,8 +207,8 @@
         lastRow = _numberOfRows - 1;
     }
     
-    _firstIndexPath = [NSIndexPath indexPathForRow:firstRow andColumn:firstColumn];
-    _lastIndexPath = [NSIndexPath indexPathForRow:lastRow andColumn:lastColumn];
+    _firstIndexPath = [NSIndexPath indexPathForSpreadsheetRow:firstRow spreadsheetColumn:firstColumn];
+    _lastIndexPath = [NSIndexPath indexPathForSpreadsheetRow:lastRow spreadsheetColumn:lastColumn];
     
 //     NSLog(@"%@, %@, %@", NSStringFromCGPoint(self.contentOffset), _firstIndexPath, _lastIndexPath);
 }
@@ -220,7 +220,7 @@
     NSMutableDictionary *itemKeysToAddDict = [NSMutableDictionary dictionary];
     
     CGPoint startPosition = (CGPoint){.x = 0, .y = 0};
-    for (int i = 0; i < _firstIndexPath.column; i++) {
+    for (int i = 0; i < _firstIndexPath.spreadsheetColumn; i++) {
         startPosition.x += [self.delegate spreadsheetView:self widthForColumn:i];
     }
     
@@ -234,14 +234,14 @@
         
         CGFloat height = [self.delegate spreadsheetView:self heightForRow:row];
         itemPosition.x = startPosition.x;
-        for (NSInteger column = _firstIndexPath.column; column <= _lastIndexPath.column; column++) {
+        for (NSInteger column = _firstIndexPath.spreadsheetColumn; column <= _lastIndexPath.spreadsheetColumn; column++) {
             
             CGFloat width = [self.delegate spreadsheetView:self widthForColumn:column];
                         
-            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row andColumn:column];
-            NSString *itemKey = [indexPath description];
+            NSIndexPath *indexPath = [NSIndexPath indexPathForSpreadsheetRow:row spreadsheetColumn:column];
+            NSString *itemKey = [indexPath spreadsheetDescription];
             
-            itemKeysToAddDict[itemKey] = [indexPath description];
+            itemKeysToAddDict[itemKey] = [indexPath spreadsheetDescription];
             
             KLSpreadsheetReusableView *view = _visibleViews[itemKey];
             if (!view) {
@@ -304,28 +304,6 @@
     }
     
     [reusableViews addObject:reusableView];
-}
-
-
-@end
-
-@implementation NSIndexPath (KLSpreadsheetView)
-
-+ (NSIndexPath *)indexPathForRow:(NSInteger)row andColumn:(NSInteger)column {
-    NSUInteger indexs[] = {row, column};
-    return [NSIndexPath indexPathWithIndexes:indexs length:2];
-}
-
-- (NSInteger)row {
-    return [self indexAtPosition:0];
-}
-
-- (NSInteger)column {
-    return [self indexAtPosition:1];
-}
-
-- (NSString *)description {
-    return [NSString stringWithFormat:@"R%d.C%d", [self row], [self column]];
 }
 
 
