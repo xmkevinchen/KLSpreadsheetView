@@ -1,0 +1,542 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0ADCC9B519A5A6FA00AD683D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADCC9B419A5A6FA00AD683D /* Foundation.framework */; };
+		0ADCC9B719A5A6FA00AD683D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADCC9B619A5A6FA00AD683D /* CoreGraphics.framework */; };
+		0ADCC9B919A5A6FA00AD683D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADCC9B819A5A6FA00AD683D /* UIKit.framework */; };
+		0ADCC9BF19A5A6FA00AD683D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0ADCC9BD19A5A6FA00AD683D /* InfoPlist.strings */; };
+		0ADCC9C119A5A6FA00AD683D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADCC9C019A5A6FA00AD683D /* main.m */; };
+		0ADCC9C519A5A6FA00AD683D /* KLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADCC9C419A5A6FA00AD683D /* KLAppDelegate.m */; };
+		0ADCC9C719A5A6FA00AD683D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ADCC9C619A5A6FA00AD683D /* Images.xcassets */; };
+		0ADCC9CE19A5A6FA00AD683D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADCC9CD19A5A6FA00AD683D /* XCTest.framework */; };
+		0ADCC9CF19A5A6FA00AD683D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADCC9B419A5A6FA00AD683D /* Foundation.framework */; };
+		0ADCC9D019A5A6FA00AD683D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADCC9B819A5A6FA00AD683D /* UIKit.framework */; };
+		0ADCC9D819A5A6FA00AD683D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0ADCC9D619A5A6FA00AD683D /* InfoPlist.strings */; };
+		0ADCC9E819A5A74000AD683D /* KLSpreadsheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADCC9E719A5A74000AD683D /* KLSpreadsheetView.m */; };
+		0ADCC9EB19A5A81D00AD683D /* KLSpreadsheetViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADCC9EA19A5A81D00AD683D /* KLSpreadsheetViewCell.m */; };
+		0ADCC9ED19A5AB3900AD683D /* KLSpreadsheetViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADCC9EC19A5AB3900AD683D /* KLSpreadsheetViewTests.m */; };
+		0ADCC9F119A687B900AD683D /* KLSpreadsheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADCC9EF19A687B900AD683D /* KLSpreadsheetViewController.m */; };
+		0ADCC9F219A687B900AD683D /* KLSpreadsheetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ADCC9F019A687B900AD683D /* KLSpreadsheetViewController.xib */; };
+		0ADCC9F819A6B23A00AD683D /* KLCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADCC9F719A6B23A00AD683D /* KLCell.m */; };
+		0ADCC9FA19A6B28900AD683D /* KLCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ADCC9F919A6B28900AD683D /* KLCell.xib */; };
+		5F073BCF6B0945849AEE97F4 /* libPods-KLSpreadsheetViewTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5687B9A9045F4B1FA1FA9D1A /* libPods-KLSpreadsheetViewTests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0ADCC9D119A5A6FA00AD683D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0ADCC9A919A5A6FA00AD683D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0ADCC9B019A5A6FA00AD683D;
+			remoteInfo = KLSpreadsheetView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0ADCC9B119A5A6FA00AD683D /* KLSpreadsheetView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KLSpreadsheetView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0ADCC9B419A5A6FA00AD683D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0ADCC9B619A5A6FA00AD683D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0ADCC9B819A5A6FA00AD683D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0ADCC9BC19A5A6FA00AD683D /* KLSpreadsheetView-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KLSpreadsheetView-Info.plist"; sourceTree = "<group>"; };
+		0ADCC9BE19A5A6FA00AD683D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0ADCC9C019A5A6FA00AD683D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0ADCC9C219A5A6FA00AD683D /* KLSpreadsheetView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KLSpreadsheetView-Prefix.pch"; sourceTree = "<group>"; };
+		0ADCC9C319A5A6FA00AD683D /* KLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLAppDelegate.h; sourceTree = "<group>"; };
+		0ADCC9C419A5A6FA00AD683D /* KLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLAppDelegate.m; sourceTree = "<group>"; };
+		0ADCC9C619A5A6FA00AD683D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0ADCC9CC19A5A6FA00AD683D /* KLSpreadsheetViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KLSpreadsheetViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0ADCC9CD19A5A6FA00AD683D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		0ADCC9D519A5A6FA00AD683D /* KLSpreadsheetViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KLSpreadsheetViewTests-Info.plist"; sourceTree = "<group>"; };
+		0ADCC9D719A5A6FA00AD683D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0ADCC9E619A5A74000AD683D /* KLSpreadsheetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLSpreadsheetView.h; sourceTree = "<group>"; };
+		0ADCC9E719A5A74000AD683D /* KLSpreadsheetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLSpreadsheetView.m; sourceTree = "<group>"; };
+		0ADCC9E919A5A81D00AD683D /* KLSpreadsheetViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLSpreadsheetViewCell.h; sourceTree = "<group>"; };
+		0ADCC9EA19A5A81D00AD683D /* KLSpreadsheetViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLSpreadsheetViewCell.m; sourceTree = "<group>"; };
+		0ADCC9EC19A5AB3900AD683D /* KLSpreadsheetViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLSpreadsheetViewTests.m; sourceTree = "<group>"; };
+		0ADCC9EE19A687B900AD683D /* KLSpreadsheetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLSpreadsheetViewController.h; sourceTree = "<group>"; };
+		0ADCC9EF19A687B900AD683D /* KLSpreadsheetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLSpreadsheetViewController.m; sourceTree = "<group>"; };
+		0ADCC9F019A687B900AD683D /* KLSpreadsheetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KLSpreadsheetViewController.xib; sourceTree = "<group>"; };
+		0ADCC9F619A6B23A00AD683D /* KLCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLCell.h; sourceTree = "<group>"; };
+		0ADCC9F719A6B23A00AD683D /* KLCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLCell.m; sourceTree = "<group>"; };
+		0ADCC9F919A6B28900AD683D /* KLCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KLCell.xib; sourceTree = "<group>"; };
+		5687B9A9045F4B1FA1FA9D1A /* libPods-KLSpreadsheetViewTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KLSpreadsheetViewTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8A63586F197465281F5F147 /* Pods-KLSpreadsheetViewTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KLSpreadsheetViewTests.xcconfig"; path = "Pods/Pods-KLSpreadsheetViewTests.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0ADCC9AE19A5A6FA00AD683D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0ADCC9B719A5A6FA00AD683D /* CoreGraphics.framework in Frameworks */,
+				0ADCC9B919A5A6FA00AD683D /* UIKit.framework in Frameworks */,
+				0ADCC9B519A5A6FA00AD683D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0ADCC9C919A5A6FA00AD683D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0ADCC9CE19A5A6FA00AD683D /* XCTest.framework in Frameworks */,
+				0ADCC9D019A5A6FA00AD683D /* UIKit.framework in Frameworks */,
+				0ADCC9CF19A5A6FA00AD683D /* Foundation.framework in Frameworks */,
+				5F073BCF6B0945849AEE97F4 /* libPods-KLSpreadsheetViewTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0ADCC9A819A5A6FA00AD683D = {
+			isa = PBXGroup;
+			children = (
+				0ADCC9BA19A5A6FA00AD683D /* KLSpreadsheetView */,
+				0ADCC9D319A5A6FA00AD683D /* KLSpreadsheetViewTests */,
+				0ADCC9B319A5A6FA00AD683D /* Frameworks */,
+				0ADCC9B219A5A6FA00AD683D /* Products */,
+				D8A63586F197465281F5F147 /* Pods-KLSpreadsheetViewTests.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		0ADCC9B219A5A6FA00AD683D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0ADCC9B119A5A6FA00AD683D /* KLSpreadsheetView.app */,
+				0ADCC9CC19A5A6FA00AD683D /* KLSpreadsheetViewTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0ADCC9B319A5A6FA00AD683D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0ADCC9B419A5A6FA00AD683D /* Foundation.framework */,
+				0ADCC9B619A5A6FA00AD683D /* CoreGraphics.framework */,
+				0ADCC9B819A5A6FA00AD683D /* UIKit.framework */,
+				0ADCC9CD19A5A6FA00AD683D /* XCTest.framework */,
+				5687B9A9045F4B1FA1FA9D1A /* libPods-KLSpreadsheetViewTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0ADCC9BA19A5A6FA00AD683D /* KLSpreadsheetView */ = {
+			isa = PBXGroup;
+			children = (
+				0ADCC9C319A5A6FA00AD683D /* KLAppDelegate.h */,
+				0ADCC9C419A5A6FA00AD683D /* KLAppDelegate.m */,
+				0ADCC9E519A5A72C00AD683D /* SpreadsheetView */,
+				0ADCC9C619A5A6FA00AD683D /* Images.xcassets */,
+				0ADCC9BB19A5A6FA00AD683D /* Supporting Files */,
+				0ADCC9EE19A687B900AD683D /* KLSpreadsheetViewController.h */,
+				0ADCC9EF19A687B900AD683D /* KLSpreadsheetViewController.m */,
+				0ADCC9F019A687B900AD683D /* KLSpreadsheetViewController.xib */,
+				0ADCC9F619A6B23A00AD683D /* KLCell.h */,
+				0ADCC9F719A6B23A00AD683D /* KLCell.m */,
+				0ADCC9F919A6B28900AD683D /* KLCell.xib */,
+			);
+			path = KLSpreadsheetView;
+			sourceTree = "<group>";
+		};
+		0ADCC9BB19A5A6FA00AD683D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0ADCC9BC19A5A6FA00AD683D /* KLSpreadsheetView-Info.plist */,
+				0ADCC9BD19A5A6FA00AD683D /* InfoPlist.strings */,
+				0ADCC9C019A5A6FA00AD683D /* main.m */,
+				0ADCC9C219A5A6FA00AD683D /* KLSpreadsheetView-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0ADCC9D319A5A6FA00AD683D /* KLSpreadsheetViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				0ADCC9D419A5A6FA00AD683D /* Supporting Files */,
+				0ADCC9EC19A5AB3900AD683D /* KLSpreadsheetViewTests.m */,
+			);
+			path = KLSpreadsheetViewTests;
+			sourceTree = "<group>";
+		};
+		0ADCC9D419A5A6FA00AD683D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0ADCC9D519A5A6FA00AD683D /* KLSpreadsheetViewTests-Info.plist */,
+				0ADCC9D619A5A6FA00AD683D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0ADCC9E519A5A72C00AD683D /* SpreadsheetView */ = {
+			isa = PBXGroup;
+			children = (
+				0ADCC9E619A5A74000AD683D /* KLSpreadsheetView.h */,
+				0ADCC9E719A5A74000AD683D /* KLSpreadsheetView.m */,
+				0ADCC9E919A5A81D00AD683D /* KLSpreadsheetViewCell.h */,
+				0ADCC9EA19A5A81D00AD683D /* KLSpreadsheetViewCell.m */,
+			);
+			path = SpreadsheetView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0ADCC9B019A5A6FA00AD683D /* KLSpreadsheetView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0ADCC9DD19A5A6FA00AD683D /* Build configuration list for PBXNativeTarget "KLSpreadsheetView" */;
+			buildPhases = (
+				0ADCC9AD19A5A6FA00AD683D /* Sources */,
+				0ADCC9AE19A5A6FA00AD683D /* Frameworks */,
+				0ADCC9AF19A5A6FA00AD683D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KLSpreadsheetView;
+			productName = KLSpreadsheetView;
+			productReference = 0ADCC9B119A5A6FA00AD683D /* KLSpreadsheetView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0ADCC9CB19A5A6FA00AD683D /* KLSpreadsheetViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0ADCC9E019A5A6FA00AD683D /* Build configuration list for PBXNativeTarget "KLSpreadsheetViewTests" */;
+			buildPhases = (
+				A2C5D030F1CD400CB17EEDE0 /* Check Pods Manifest.lock */,
+				0ADCC9C819A5A6FA00AD683D /* Sources */,
+				0ADCC9C919A5A6FA00AD683D /* Frameworks */,
+				0ADCC9CA19A5A6FA00AD683D /* Resources */,
+				D1A297EEDB8644BF8DF0924C /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0ADCC9D219A5A6FA00AD683D /* PBXTargetDependency */,
+			);
+			name = KLSpreadsheetViewTests;
+			productName = KLSpreadsheetViewTests;
+			productReference = 0ADCC9CC19A5A6FA00AD683D /* KLSpreadsheetViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0ADCC9A919A5A6FA00AD683D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = KL;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "KnightLord Universe Technolegies Ltd";
+				TargetAttributes = {
+					0ADCC9CB19A5A6FA00AD683D = {
+						TestTargetID = 0ADCC9B019A5A6FA00AD683D;
+					};
+				};
+			};
+			buildConfigurationList = 0ADCC9AC19A5A6FA00AD683D /* Build configuration list for PBXProject "KLSpreadsheetView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0ADCC9A819A5A6FA00AD683D;
+			productRefGroup = 0ADCC9B219A5A6FA00AD683D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0ADCC9B019A5A6FA00AD683D /* KLSpreadsheetView */,
+				0ADCC9CB19A5A6FA00AD683D /* KLSpreadsheetViewTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0ADCC9AF19A5A6FA00AD683D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0ADCC9F219A687B900AD683D /* KLSpreadsheetViewController.xib in Resources */,
+				0ADCC9BF19A5A6FA00AD683D /* InfoPlist.strings in Resources */,
+				0ADCC9FA19A6B28900AD683D /* KLCell.xib in Resources */,
+				0ADCC9C719A5A6FA00AD683D /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0ADCC9CA19A5A6FA00AD683D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0ADCC9D819A5A6FA00AD683D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A2C5D030F1CD400CB17EEDE0 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D1A297EEDB8644BF8DF0924C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-KLSpreadsheetViewTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0ADCC9AD19A5A6FA00AD683D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0ADCC9F819A6B23A00AD683D /* KLCell.m in Sources */,
+				0ADCC9EB19A5A81D00AD683D /* KLSpreadsheetViewCell.m in Sources */,
+				0ADCC9C119A5A6FA00AD683D /* main.m in Sources */,
+				0ADCC9E819A5A74000AD683D /* KLSpreadsheetView.m in Sources */,
+				0ADCC9F119A687B900AD683D /* KLSpreadsheetViewController.m in Sources */,
+				0ADCC9C519A5A6FA00AD683D /* KLAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0ADCC9C819A5A6FA00AD683D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0ADCC9ED19A5AB3900AD683D /* KLSpreadsheetViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0ADCC9D219A5A6FA00AD683D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0ADCC9B019A5A6FA00AD683D /* KLSpreadsheetView */;
+			targetProxy = 0ADCC9D119A5A6FA00AD683D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0ADCC9BD19A5A6FA00AD683D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0ADCC9BE19A5A6FA00AD683D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		0ADCC9D619A5A6FA00AD683D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0ADCC9D719A5A6FA00AD683D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0ADCC9DB19A5A6FA00AD683D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0ADCC9DC19A5A6FA00AD683D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0ADCC9DE19A5A6FA00AD683D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KLSpreadsheetView/KLSpreadsheetView-Prefix.pch";
+				INFOPLIST_FILE = "KLSpreadsheetView/KLSpreadsheetView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0ADCC9DF19A5A6FA00AD683D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KLSpreadsheetView/KLSpreadsheetView-Prefix.pch";
+				INFOPLIST_FILE = "KLSpreadsheetView/KLSpreadsheetView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		0ADCC9E119A5A6FA00AD683D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8A63586F197465281F5F147 /* Pods-KLSpreadsheetViewTests.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KLSpreadsheetView.app/KLSpreadsheetView";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KLSpreadsheetView/KLSpreadsheetView-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "KLSpreadsheetViewTests/KLSpreadsheetViewTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		0ADCC9E219A5A6FA00AD683D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8A63586F197465281F5F147 /* Pods-KLSpreadsheetViewTests.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KLSpreadsheetView.app/KLSpreadsheetView";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KLSpreadsheetView/KLSpreadsheetView-Prefix.pch";
+				INFOPLIST_FILE = "KLSpreadsheetViewTests/KLSpreadsheetViewTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0ADCC9AC19A5A6FA00AD683D /* Build configuration list for PBXProject "KLSpreadsheetView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0ADCC9DB19A5A6FA00AD683D /* Debug */,
+				0ADCC9DC19A5A6FA00AD683D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0ADCC9DD19A5A6FA00AD683D /* Build configuration list for PBXNativeTarget "KLSpreadsheetView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0ADCC9DE19A5A6FA00AD683D /* Debug */,
+				0ADCC9DF19A5A6FA00AD683D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0ADCC9E019A5A6FA00AD683D /* Build configuration list for PBXNativeTarget "KLSpreadsheetViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0ADCC9E119A5A6FA00AD683D /* Debug */,
+				0ADCC9E219A5A6FA00AD683D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0ADCC9A919A5A6FA00AD683D /* Project object */;
+}
