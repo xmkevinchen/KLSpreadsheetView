@@ -246,6 +246,7 @@
             KLSpreadsheetReusableView *view = _visibleViews[itemKey];
             if (!view) {
                 view = [self createPreparedCellForItemAtIndexPath:indexPath];
+                view.clipsToBounds = YES;
                 
                 if (view) {
                     _visibleViews[itemKey] = view;

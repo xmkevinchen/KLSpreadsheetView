@@ -54,7 +54,7 @@
 }
 
 - (NSUInteger)numberOfColumnsInSpreadsheetView:(KLSpreadsheetView *)spreadsheetView {
-    return 10;
+    return 20;
 }
 
 - (KLSpreadsheetViewCell *)spreadsheetView:(KLSpreadsheetView *)spreadsheetView cellForItemAtIndex:(NSIndexPath *)indexPath {
@@ -70,11 +70,19 @@
 #pragma mark - KLSpreadsheetDelegate
 
 - (CGFloat)spreadsheetView:(KLSpreadsheetView *)spreadsheetView heightForRow:(NSInteger)row {
-    return 30.0f;
+    if (row % 2 == 0) {
+        return 30.0f;
+    } else {
+        return 50.0f;
+    }
 }
 
 - (CGFloat)spreadsheetView:(KLSpreadsheetView *)spreadsheetView widthForColumn:(NSInteger)column {
-    return 100.0f;
+    if (column % 2 == 0) {
+        return 100.0f;
+    } else {
+        return 50.0f;
+    }
 }
 
 @end
