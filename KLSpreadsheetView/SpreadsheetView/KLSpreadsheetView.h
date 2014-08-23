@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "NSIndexPath+KLSpreadsheetView.h"
 
 @protocol KLSpreadsheetDataSource;
 @protocol KLSpreadsheetDelegate;
 
 @class KLSpreadsheetViewCell;
+@class KLSpreadsheetViewIndexPath;
+
+
 
 @interface KLSpreadsheetView : UIScrollView
 
@@ -20,12 +22,11 @@
 @property (nonatomic, weak) IBOutlet id<KLSpreadsheetDataSource> dataSource;
 
 
-
 - (void)reloadData;
 - (void)registerNib:(UINib *)nib forCellReuseIdentifier:(NSString *)identifier;
 - (void)registerClass:(Class)cellClass forCellReuseIdentifier:(NSString *)identifier;
 
-- (id)dequeueReusableCellWithReuseIdentifier:(NSString *)identifier forIndexPath:(NSIndexPath *)indexPath;
+- (id)dequeueReusableCellWithReuseIdentifier:(NSString *)identifier forIndexPath:(KLSpreadsheetViewIndexPath *)indexPath;
 
 @end
 
@@ -35,7 +36,7 @@
 @required
 - (NSUInteger)numberOfRowsInSpreadsheetView:(KLSpreadsheetView *)spreadsheetView;
 - (NSUInteger)numberOfColumnsInSpreadsheetView:(KLSpreadsheetView *)spreadsheetView;
-- (KLSpreadsheetViewCell *)spreadsheetView:(KLSpreadsheetView *)spreadsheetView cellForItemAtIndex:(NSIndexPath *)indexPath;
+- (KLSpreadsheetViewCell *)spreadsheetView:(KLSpreadsheetView *)spreadsheetView cellForItemAtIndex:(KLSpreadsheetViewIndexPath *)indexPath;
 
 @end
 
@@ -45,5 +46,14 @@
 - (CGFloat)spreadsheetView:(KLSpreadsheetView *)spreadsheetView heightForRow:(NSInteger)row;
 - (CGFloat)spreadsheetView:(KLSpreadsheetView *)spreadsheetView widthForColumn:(NSInteger)column;
 
+
+@end
+
+@interface KLSpreadsheetViewIndexPath : NSObject
+
++ (instancetype)indexWithRow:(NSUInteger)row column:(NSUInteger)column;
+
+@property (nonatomic, readonly) NSUInteger row;
+@property (nonatomic, readonly) NSUInteger column;
 
 @end

@@ -9,6 +9,9 @@
 #import "KLSpreadsheetView.h"
 #import "KLSpreadsheetViewCell.h"
 
+
+
+
 @interface KLSpreadsheetView () {
     
     NSMutableDictionary *_registerCellNibs;
@@ -26,8 +29,8 @@
     CGPoint _minPossibleContentOffset;
     CGPoint _maxPossibleContentOffset;
     
-    NSIndexPath *_firstIndexPath;
-    NSIndexPath *_lastIndexPath;
+    KLSpreadsheetViewIndexPath *_firstIndexPath;
+    KLSpreadsheetViewIndexPath *_lastIndexPath;
 }
 
 
@@ -91,7 +94,7 @@
     _registerCellClasses[identifier] = cellClass;
 }
 
-- (id)dequeueReusableCellWithReuseIdentifier:(NSString *)identifier forIndexPath:(NSIndexPath *)indexPath {
+- (id)dequeueReusableCellWithReuseIdentifier:(NSString *)identifier forIndexPath:(KLSpreadsheetViewIndexPath *)indexPath {
     NSMutableArray *reusableCells = _reusableCellsQueues[identifier];
     KLSpreadsheetViewCell *cell = [reusableCells lastObject];
     
@@ -207,8 +210,8 @@
         lastRow = _numberOfRows - 1;
     }
     
-    _firstIndexPath = [NSIndexPath indexPathForSpreadsheetRow:firstRow spreadsheetColumn:firstColumn];
-    _lastIndexPath = [NSIndexPath indexPathForSpreadsheetRow:lastRow spreadsheetColumn:lastColumn];
+    _firstIndexPath = [KLSpreadsheetViewIndexPath indexWithRow:firstRow column:firstColumn];
+    _lastIndexPath = [KLSpreadsheetViewIndexPath indexWithRow:lastRow column:lastColumn];
     
 //     NSLog(@"%@, %@, %@", NSStringFromCGPoint(self.contentOffset), _firstIndexPath, _lastIndexPath);
 }
@@ -220,7 +223,7 @@
     NSMutableDictionary *itemKeysToAddDict = [NSMutableDictionary dictionary];
     
     CGPoint startPosition = (CGPoint){.x = 0, .y = 0};
-    for (int i = 0; i < _firstIndexPath.spreadsheetColumn; i++) {
+    for (int i = 0; i < _firstIndexPath.column; i++) {
         startPosition.x += [self.delegate spreadsheetView:self widthForColumn:i];
     }
     
@@ -234,14 +237,14 @@
         
         CGFloat height = [self.delegate spreadsheetView:self heightForRow:row];
         itemPosition.x = startPosition.x;
-        for (NSInteger column = _firstIndexPath.spreadsheetColumn; column <= _lastIndexPath.spreadsheetColumn; column++) {
+        for (NSInteger column = _firstIndexPath.column; column <= _lastIndexPath.column; column++) {
             
             CGFloat width = [self.delegate spreadsheetView:self widthForColumn:column];
                         
-            NSIndexPath *indexPath = [NSIndexPath indexPathForSpreadsheetRow:row spreadsheetColumn:column];
-            NSString *itemKey = [indexPath spreadsheetDescription];
+            KLSpreadsheetViewIndexPath *indexPath = [KLSpreadsheetViewIndexPath indexWithRow:row column:column];
+            NSString *itemKey = [indexPath description];
             
-            itemKeysToAddDict[itemKey] = [indexPath spreadsheetDescription];
+            itemKeysToAddDict[itemKey] = [indexPath description];
             
             KLSpreadsheetReusableView *view = _visibleViews[itemKey];
             if (!view) {
@@ -278,7 +281,7 @@
     
 }
 
-- (KLSpreadsheetViewCell *) createPreparedCellForItemAtIndexPath:(NSIndexPath *)indexPath {
+- (KLSpreadsheetViewCell *) createPreparedCellForItemAtIndexPath:(KLSpreadsheetViewIndexPath *)indexPath {
     KLSpreadsheetViewCell *cell = [self.dataSource spreadsheetView:self cellForItemAtIndex:indexPath];
     
     return cell;
@@ -304,6 +307,31 @@
     }
     
     [reusableViews addObject:reusableView];
+}
+
+
+@end
+
+@interface KLSpreadsheetViewIndexPath ()
+
+@property (nonatomic, assign) NSUInteger row;
+@property (nonatomic, assign) NSUInteger column;
+
+@end
+
+@implementation KLSpreadsheetViewIndexPath
+
++ (instancetype)indexWithRow:(NSUInteger)row column:(NSUInteger)column {
+    KLSpreadsheetViewIndexPath *indexPath = [[KLSpreadsheetViewIndexPath alloc] init];
+    if (indexPath) {
+        indexPath.row = row;
+        indexPath.column = column;
+    }
+    return indexPath;
+}
+
+- (NSString *)description {
+    return [NSString stringWithFormat:@"R%d.C%d", _row, _column];
 }
 
 

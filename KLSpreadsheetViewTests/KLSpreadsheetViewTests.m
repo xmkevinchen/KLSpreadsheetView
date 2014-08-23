@@ -16,11 +16,11 @@ describe(@"NSIndexPath", ^{
     it(@"should return correct row and column value", ^{
         NSInteger row = 1;
         NSInteger column = 2;
-        NSIndexPath *indexPath = [NSIndexPath indexPathForSpreadsheetRow:row spreadsheetColumn:column];
+        KLSpreadsheetViewIndexPath *indexPath = [KLSpreadsheetViewIndexPath indexWithRow:row column:column];
         
-        [[theValue(indexPath.spreadsheetRow) should] equal:theValue(row)];
-        [[theValue(indexPath.spreadsheetColumn) should] equal:theValue(column)];
-        [[[indexPath spreadsheetDescription] should] equal:@"R1.C2"];
+        [[theValue(indexPath.row) should] equal:theValue(row)];
+        [[theValue(indexPath.column) should] equal:theValue(column)];
+        [[[indexPath description] should] equal:@"R1.C2"];
         
     });
 });

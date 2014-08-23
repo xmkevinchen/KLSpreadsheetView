@@ -57,7 +57,7 @@
     return 20;
 }
 
-- (KLSpreadsheetViewCell *)spreadsheetView:(KLSpreadsheetView *)spreadsheetView cellForItemAtIndex:(NSIndexPath *)indexPath {
+- (KLSpreadsheetViewCell *)spreadsheetView:(KLSpreadsheetView *)spreadsheetView cellForItemAtIndex:(KLSpreadsheetViewIndexPath *)indexPath {
     KLCell *cell = [spreadsheetView dequeueReusableCellWithReuseIdentifier:@"KLCell" forIndexPath:indexPath];
     
     cell.label.text = [indexPath description];
