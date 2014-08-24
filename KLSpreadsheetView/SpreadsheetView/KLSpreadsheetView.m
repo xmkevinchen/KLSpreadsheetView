@@ -8,9 +8,7 @@
 
 #import "KLSpreadsheetView.h"
 #import "KLSpreadsheetViewCell.h"
-
-
-
+#import "KLSpreadsheetViewIndexPath.h"
 
 @interface KLSpreadsheetView () {
     
@@ -210,8 +208,10 @@
         lastRow = _numberOfRows - 1;
     }
     
-    _firstIndexPath = [KLSpreadsheetViewIndexPath indexWithRow:firstRow column:firstColumn];
-    _lastIndexPath = [KLSpreadsheetViewIndexPath indexWithRow:lastRow column:lastColumn];
+    _firstIndexPath = [KLSpreadsheetViewIndexPath indexWithRow:((firstRow >= 0) ? firstRow : 0)
+                                                        column:((firstColumn >= 0) ? firstColumn : 0)];
+    _lastIndexPath = [KLSpreadsheetViewIndexPath indexWithRow:((lastRow >= 0) ? lastRow : 0)
+                                                       column:((lastColumn >= 0) ? lastColumn : 0)];
     
 //     NSLog(@"%@, %@, %@", NSStringFromCGPoint(self.contentOffset), _firstIndexPath, _lastIndexPath);
 }
@@ -312,27 +312,4 @@
 
 @end
 
-@interface KLSpreadsheetViewIndexPath ()
 
-@property (nonatomic, assign) NSUInteger row;
-@property (nonatomic, assign) NSUInteger column;
-
-@end
-
-@implementation KLSpreadsheetViewIndexPath
-
-+ (instancetype)indexWithRow:(NSUInteger)row column:(NSUInteger)column {
-    KLSpreadsheetViewIndexPath *indexPath = [[KLSpreadsheetViewIndexPath alloc] init];
-    if (indexPath) {
-        indexPath.row = row;
-        indexPath.column = column;
-    }
-    return indexPath;
-}
-
-- (NSString *)description {
-    return [NSString stringWithFormat:@"R%d.C%d", _row, _column];
-}
-
-
-@end

@@ -8,6 +8,7 @@
 
 #import "KLSpreadsheetViewController.h"
 #import "KLCell.h"
+#import "KLSpreadsheetViewIndexPath.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface KLSpreadsheetViewController ()

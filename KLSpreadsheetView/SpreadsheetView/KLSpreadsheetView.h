@@ -49,11 +49,3 @@
 
 @end
 
-@interface KLSpreadsheetViewIndexPath : NSObject
-
-+ (instancetype)indexWithRow:(NSUInteger)row column:(NSUInteger)column;
-
-@property (nonatomic, readonly) NSUInteger row;
-@property (nonatomic, readonly) NSUInteger column;
-
-@end
